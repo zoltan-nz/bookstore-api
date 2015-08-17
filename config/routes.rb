@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :publishing_houses, except: [:new, :edit]
+  resources :publishing_houses, path: '/publishing-houses', except: [:new, :edit]
   resources :authors, except: [:new, :edit]
   resources :books, except: [:new, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
