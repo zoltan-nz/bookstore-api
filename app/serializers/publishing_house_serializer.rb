@@ -1,3 +1,3 @@
 class PublishingHouseSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :discount
 end

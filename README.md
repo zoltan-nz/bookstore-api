@@ -10,6 +10,10 @@ Install rails-api and generate the project.
 	rails-api new bookstore-api
 	bundle update
 
+Add `active_model_serializers` to `Gemfile`.
+
+	gem 'active_model_serializers', '~> 0.10.0.rc2'
+	
 Scaffold models and controllers.
 
 	bin/rails generate scaffold book title 'price:decimal{5,2}' author:references publisher:references{polymorphic}
@@ -23,13 +27,6 @@ Add sample data to `db/seeds.rb`.
 Update `config/routes.rb` with dashes.
 
     resources :publishing_houses, path: '/publishing-houses', except: [:new, :edit]
-
-Add `active_model_serializers` to `Gemfile`.
-
-	gem 'active_model_serializers', '~> 0.10.0.rc2'
-	rails g serializer book
-	rails g serializer author
-	rails g serializer publishing_house
 
 Update `config/application.rb` and comment out `action_mailer` configuration lines.
 
