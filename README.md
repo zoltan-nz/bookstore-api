@@ -99,3 +99,11 @@ PublishingHouseSerializer (`app/serializers/publishing_house_serializer.rb`)
       attributes :id, :name, :discount
       has_many :published
     end
+
+### Add books as extra payload to Authors
+
+`app/controllers/authors_controller.rb`
+
+    def show
+      render json: @author, include: ['books']
+    end
