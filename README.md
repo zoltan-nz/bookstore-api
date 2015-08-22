@@ -107,3 +107,12 @@ PublishingHouseSerializer (`app/serializers/publishing_house_serializer.rb`)
     def show
       render json: @author, include: ['books']
     end
+
+## Test requests with Postman
+
+Postman: [link](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+
+    GET http://localhost:3000/publishing_houses
+    GET http://localhost:3000/authors
+    GET http://localhost:3000/books
+    GET http://localhost:3000/authors/1
