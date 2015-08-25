@@ -106,7 +106,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.10.0.rc2)
   puma
   rails (= 4.2.3)
-  rails-api
+  rails-api (~> 0.4.0)
   spring
   sqlite3
 

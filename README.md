@@ -116,3 +116,7 @@ Postman: [link](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbd
     GET http://localhost:3000/authors
     GET http://localhost:3000/books
     GET http://localhost:3000/authors/1
+
+Using curl
+
+    curl http://localhost:3000/publishing-houses | python -m json.tool
