@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
 
-    render json: @books
+    render json: @books, include: %w(author publisher)
   end
 
   # GET /books/1

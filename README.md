@@ -127,6 +127,14 @@ PublishingHouseSerializer (`app/serializers/publishing_house_serializer.rb`)
       render json: @author, include: ['books']
     end
 
+### Add include to BooksController#index
+
+Attach `author` and `publisher` data to generated json.
+
+### Add `oj` gem to the project
+
+`oj` is the fastest json generator gem in ruby world.
+
 ## Test requests with Postman
 
 Postman: [link](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
