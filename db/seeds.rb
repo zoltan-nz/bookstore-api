@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'byebug'
 
 pub1 = PublishingHouse.create(name: "ABC Publisher", discount: 40)
 pub2 = PublishingHouse.create(name: "Acme Publishing House", discount: 50)
@@ -33,3 +34,23 @@ bookc = Book.create(title: "Lilly Reborn", author: author4, publisher: pub3, pri
 bookd = Book.create(title: "Anathema", author: author5, publisher: author5, price: 9.41)
 booke = Book.create(title: "Best Of", author: author2, publisher: pub3, price: 12.24)
 bookf = Book.create(title: "Anyway", author: author6, publisher: pub3, price: 19.99)
+
+50.times do
+  PublishingHouse.create(name: Faker::Book.publisher, discount: Faker::Number.between(1, 50))
+end
+
+100.times do
+  Author.create(name: Faker::Name.name)
+end
+
+publishing_house_size = PublishingHouse.count
+author_size = Author.count
+
+1000.times do
+  publishing_house = PublishingHouse.find(Faker::Number.between(1, publishing_house_size))
+  author = Author.find(Faker::Number.between(1, author_size))
+
+  publisher = Random.rand(2) == 0 ? author : publishing_house
+
+  Book.create(title: Faker::Book.title, author: author, publisher: publisher, price: Faker::Number.decimal(2))
+end
