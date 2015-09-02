@@ -4,9 +4,9 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all.includes(:author, :publisher)
+    @books = Book.limit(params[:limit]).includes(:author, :publisher)
 
-    render json: @books, include: %w(author publisher)
+    render json: @books, include: %w(author publisher), meta: { total: Book.count }
   end
 
   # GET /books/1
@@ -54,6 +54,6 @@ class BooksController < ApplicationController
     end
 
     def book_params
-      params.require(:book).permit(:title, :price, :author_id, :publisher_id, :publisher_type)
+      params.require(:book).permit(:title, :price, :author_id, :publisher_id, :publisher_type, :limit)
     end
 end

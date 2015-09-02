@@ -19,3 +19,5 @@ gem 'oj'
 gem 'faker'
 
 gem 'byebug', :group => :development
+
+gem 'kaminari'

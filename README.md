@@ -147,3 +147,8 @@ Postman: [link](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbd
 Using curl
 
     curl http://localhost:3000/publishing-houses | python -m json.tool
+
+## Add pagination feature with kaminari
+
+* Add `kaminari` gem to `Gemfile`
+* Add `limit` param to `BooksController`
