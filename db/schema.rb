@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150815061417) do
+ActiveRecord::Schema.define(version: 20150816061300) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -21,22 +24,23 @@ ActiveRecord::Schema.define(version: 20150815061417) do
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
-    t.decimal  "price",          precision: 5, scale: 2
+    t.decimal  "price"
     t.integer  "author_id"
     t.integer  "publisher_id"
     t.string   "publisher_type"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
-  add_index "books", ["author_id"], name: "index_books_on_author_id"
-  add_index "books", ["publisher_type", "publisher_id"], name: "index_books_on_publisher_type_and_publisher_id"
+  add_index "books", ["author_id"], name: "index_books_on_author_id", using: :btree
+  add_index "books", ["publisher_type", "publisher_id"], name: "index_books_on_publisher_type_and_publisher_id", using: :btree
 
   create_table "publishing_houses", force: :cascade do |t|
     t.string   "name"
-    t.decimal  "discount",   precision: 2, scale: 2
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "discount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "books", "authors"
 end
