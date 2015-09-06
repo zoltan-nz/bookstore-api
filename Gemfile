@@ -24,3 +24,7 @@ gem 'byebug', :group => :development
 gem 'kaminari'
 
 gem 'pg'
+
+gem 'rails_12factor', group: :production
+
+gem 'rack-cors', :require => 'rack/cors'
