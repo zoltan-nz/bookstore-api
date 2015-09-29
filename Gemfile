@@ -11,7 +11,7 @@ gem 'spring', :group => :development
 gem 'puma'
 
 #JSON API serialization
-gem 'active_model_serializers', '~> 0.10.0.rc2'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 #Fast json generation
 gem 'oj'
