@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/ohler55/oj.git
+  revision: ffa80e2cc7fe3ffa67dab07d714cdd32f61c1e2c
+  specs:
+    oj (2.12.15a2)
+
+GIT
   remote: git://github.com/rails-api/active_model_serializers.git
   revision: d02cd30fe55a3ea85e1d351b6e039620903c1871
   specs:
@@ -67,7 +73,6 @@ GEM
     minitest (5.8.1)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    oj (2.12.14)
     oj_mimic_json (1.0.1)
     pg (0.18.3)
     puma (2.14.0)
@@ -128,7 +133,7 @@ DEPENDENCIES
   byebug
   faker
   kaminari
-  oj
+  oj!
   oj_mimic_json
   pg
   puma
