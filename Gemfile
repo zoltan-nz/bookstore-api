@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+# ruby '2.2.3'
 
 gem 'rails', '4.2.3'
 gem 'rails-api', '~> 0.4.0'
-gem 'spring', :group => :development
-# gem 'sqlite3'
+gem 'spring', group: :development
+gem 'sqlite3', group: [:development, :test]
 
 #Fast webserver
 gem 'puma'
@@ -19,12 +19,12 @@ gem 'oj_mimic_json'
 
 gem 'faker'
 
-gem 'byebug', :group => :development
+gem 'byebug', group: :development
 
 gem 'kaminari'
 
-gem 'pg'
+gem 'pg', group: :production
 
 gem 'rails_12factor', group: :production
 
-gem 'rack-cors', :require => 'rack/cors'
+gem 'rack-cors', require: 'rack/cors'

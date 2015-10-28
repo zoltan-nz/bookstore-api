@@ -1,12 +1,12 @@
 GIT
   remote: git://github.com/ohler55/oj.git
-  revision: ffa80e2cc7fe3ffa67dab07d714cdd32f61c1e2c
+  revision: 1271d9fb9fca11498d6d629bfcfbfc38f39db8d3
   specs:
-    oj (2.12.15a2)
+    oj (2.13.0)
 
 GIT
   remote: git://github.com/rails-api/active_model_serializers.git
-  revision: d02cd30fe55a3ea85e1d351b6e039620903c1871
+  revision: 827a623d1675d126cec264c4f3a973c1373769da
   specs:
     active_model_serializers (0.10.0.rc3)
       actionpack (>= 4.0)
@@ -70,7 +70,7 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.6.2)
     mini_portile (0.6.2)
-    minitest (5.8.1)
+    minitest (5.8.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     oj_mimic_json (1.0.1)
@@ -120,6 +120,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
+    sqlite3 (1.3.11)
     thor (0.19.1)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
@@ -142,6 +143,7 @@ DEPENDENCIES
   rails-api (~> 0.4.0)
   rails_12factor
   spring
+  sqlite3
 
 BUNDLED WITH
    1.10.6
