@@ -2,6 +2,10 @@
 
 Based on [this](http://emberigniter.com/modern-bridge-ember-and-rails-5-with-json-api/) tutorial.
 
+Connected Ember.js client: https://github.com/szines/bookstore-client
+
+Demo application: http://zoltan.nz/bookstore-client/
+
 ## Implementation log
 
 ### Setup rails-api
@@ -14,7 +18,7 @@ Install latest (`0.4.0`) rails-api, rails (`4.2.3`) and generate the project.
 
 Add `active_model_serializers` to `Gemfile`.
 
-	gem 'active_model_serializers', '~> 0.10.0.rc2'
+	gem 'active_model_serializers', '~> 0.10.0.rc3'
 
 The following needs only if rails should listen for requests from outside localhost
 

@@ -15,7 +15,7 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 
 #Fast json generation
 gem 'oj', github: 'ohler55/oj'
-gem 'oj_mimic_json'
+# gem 'oj_mimic_json'
 
 gem 'faker'
 
