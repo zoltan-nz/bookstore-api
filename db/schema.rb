@@ -13,9 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20150816061300) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -32,8 +29,8 @@ ActiveRecord::Schema.define(version: 20150816061300) do
     t.datetime "updated_at",     null: false
   end
 
-  add_index "books", ["author_id"], name: "index_books_on_author_id", using: :btree
-  add_index "books", ["publisher_type", "publisher_id"], name: "index_books_on_publisher_type_and_publisher_id", using: :btree
+  add_index "books", ["author_id"], name: "index_books_on_author_id"
+  add_index "books", ["publisher_type", "publisher_id"], name: "index_books_on_publisher_type_and_publisher_id"
 
   create_table "publishing_houses", force: :cascade do |t|
     t.string   "name"
@@ -42,5 +39,4 @@ ActiveRecord::Schema.define(version: 20150816061300) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "books", "authors"
 end

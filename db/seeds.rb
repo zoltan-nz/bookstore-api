@@ -45,7 +45,7 @@ end
 publishing_house_size = PublishingHouse.count
 author_size = Author.count
 
-1000.times do
+3000.times do
   publishing_house = PublishingHouse.find(Faker::Number.between(1, publishing_house_size))
   author = Author.find(Faker::Number.between(1, author_size))
 
